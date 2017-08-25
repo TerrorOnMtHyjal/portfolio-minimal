@@ -6,7 +6,7 @@ const Wrap = styled.div`
   flex-flow: column;
   align-items: center;
   width: 100%;
-  height: 100vh;
+  height: 50vh;
   color: red;
   background-color: green;
 `;
