@@ -9,6 +9,8 @@ const Wrap = styled.div`
   display: flex;
   flex-flow: column;
   width: 100vw;
+  font-family: 'Raleway', sans-serif;
+  // font-family: 'Josefin Slab', serif;
 `;
 
 class App extends Component {
