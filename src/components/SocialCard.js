@@ -19,12 +19,13 @@ const InnerWrap = styled.div`
   align-items: center;
   width: 90%;
 
-  & > i {
+  & > a {
     transition: all 0.25s ease-in-out;
-    
+    text-decoration: none;
+    color: inherit;
+
     &:hover {
       color: black;
-      transform: scale(1.1);
     }
   }
 `;
@@ -34,9 +35,19 @@ class SocialCard extends Component {
     return (
       <Wrap>
         <InnerWrap>
-          <i className="fa fa-github" aria-hidden="true"></i>
-          <i className="fa fa-linkedin" aria-hidden="true"></i>
-          <i className="fa fa-envelope" aria-hidden="true"></i>
+
+          <a href="http://www.github.com/dustwise" target="_blank">
+            <i className="fa fa-github" aria-hidden="true"/>
+          </a>
+
+          <a href="http://www.linkedin.com/in/jaredmohney" target="_blank">
+            <i className="fa fa-linkedin" aria-hidden="true"/>
+          </a>
+
+          <a href="mailto:jared.mohney@gmail.com?Subject=Hello%20Jared" target="_blank">
+            <i className="fa fa-envelope" aria-hidden="true"/>
+          </a>
+
         </InnerWrap>
       </Wrap>
     );
