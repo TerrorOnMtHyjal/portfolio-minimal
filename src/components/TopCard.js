@@ -7,8 +7,9 @@ const Wrap = styled.div`
   align-items: center;
   width: 100%;
   height: 50vh;
-  color: red;
-  background-color: green;
+  color: white;
+  background-color: black;
+  font-size: 1em;
 `;
 
 const InnerWrap = styled.div`
@@ -16,8 +17,24 @@ const InnerWrap = styled.div`
   flex-flow: column;
   align-items: center;
   width: 95%;
-  height: 100%;
-  background-color: black;
+`;
+
+const SkillsList = styled.ul`
+  display: flex;
+  padding: 0;
+  margin: 0;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  list-style-type: none;
+`;
+
+const Skill = styled.li`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 1em 0.5em 0 0.5em;
 `;
 
 class TopCard extends Component {
@@ -28,14 +45,15 @@ class TopCard extends Component {
           <h1>Jared Mohney</h1>
           <h3>Is tired of this shit</h3>
           <p>Longmont, CO</p>
-          <ul>
-            <li>React</li>
-            <li>Redux</li>
-            <li>MongoDB</li>
-            <li>PostgreSQL</li>
-            <li>stuff</li>
-            <li>wizards</li>
-          </ul>
+          <SkillsList>
+            <Skill>React</Skill>
+            <Skill>Redux</Skill>
+            <Skill>MongoDB</Skill>
+            <Skill>PostgreSQL</Skill>
+            <Skill>Node</Skill>
+            <Skill>Express</Skill>
+            <Skill>Passport</Skill>
+          </SkillsList>
         </InnerWrap>
       </Wrap>
     );
