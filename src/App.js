@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import TopCard from './components/TopCard';
+import Projects from './components/Projects';
+import SocialCard from './components/SocialCard';
 
 const Wrap = styled.div`
   display: flex;
@@ -14,6 +16,8 @@ class App extends Component {
     return (
       <Wrap>
         <TopCard/>
+        <Projects/>
+        <SocialCard/>
       </Wrap>
     );
   }
