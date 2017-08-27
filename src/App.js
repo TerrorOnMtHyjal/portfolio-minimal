@@ -8,7 +8,8 @@ import SocialCard from './components/SocialCard';
 const Wrap = styled.div`
   display: flex;
   flex-flow: column;
-  width: 100vw;
+  width: 100%;
+  border: 1px solid blue;
   font-family: 'Raleway', sans-serif;
   // font-family: 'Josefin Slab', serif;
 `;

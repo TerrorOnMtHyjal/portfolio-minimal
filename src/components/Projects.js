@@ -8,7 +8,6 @@ const Wrap = styled.div`
   flex-flow: column;
   align-items: center;
   width: 100%;
-  background-color: purple;
 `;
 
 class Projects extends Component {
