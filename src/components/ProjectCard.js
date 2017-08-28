@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 import ImageSlider from './ImageSlider';
 import ProjectStack from './ProjectStack';
+import ProjectLinks from './ProjectLinks';
 
 
 const Wrap = styled.div`
@@ -43,15 +44,18 @@ const TopInfo = styled.div`
 
 class ProjectCard extends Component {
   render() {
+    const { backgroundColor, title, tagline, images, stack, links} = this.props.data;
+
     return (
-      <Wrap color={this.props.data.backgroundColor}>
+      <Wrap color={ backgroundColor }>
         <InnerWrap>
           <TopInfo>
-            <h2>{this.props.data.title}</h2>
-            <h3>{this.props.data.tagline}</h3>
+            <h2>{ title }</h2>
+            <h3>{ tagline }</h3>
           </TopInfo>
-          <ImageSlider images={this.props.data.images}/>
-          <ProjectStack stack={this.props.data.stack}/>
+          <ImageSlider images={ images } />
+          <ProjectStack stack={ stack } />
+          <ProjectLinks links={ links } />
         </InnerWrap>
       </Wrap>
     );

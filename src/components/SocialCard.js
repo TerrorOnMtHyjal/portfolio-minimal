@@ -8,7 +8,7 @@ const Wrap = styled.div`
   justify-content: center;
   width: 100%;
   height: 100vh;
-  background-color: #ff00ae;
+  background-color: #3feee6;
   font-size: 3em;
   color: white;
 `;
