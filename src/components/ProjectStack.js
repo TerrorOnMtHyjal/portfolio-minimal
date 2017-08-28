@@ -3,11 +3,10 @@ import styled from 'styled-components';
 
 const SkillsList = styled.ul`
   display: flex;
-  flex-flow: column;
   padding: 0;
   margin: 0;
-  justify-content: center;
-  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
   width: 100%;
   list-style-type: none;
   color: white;
@@ -24,12 +23,21 @@ const Skill = styled.li`
   background-color: #1a1a1d;
 `;
 
+const FillerSkill = styled.li`
+  height: 0;
+  width: 25%;
+`;
+
 class ProjectStack extends Component {
 
   generateStack(stack){
-    return stack.map((skill, index) => {
+    const stackArr = stack.map((skill, index) => {
       return <Skill key={skill + index}>{skill}</Skill>
-    })
+    });
+
+    stackArr.push(<FillerSkill key="fill1"/>, <FillerSkill key="fill2"/>, <FillerSkill key="fill3"/>, <FillerSkill key="fill4"/>);
+
+    return stackArr;
   }
 
   render() {
