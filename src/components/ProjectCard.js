@@ -114,15 +114,6 @@ class ProjectCard extends Component {
                   <Image src={require("../images/pogtracker-2.png")}/>
                 </ImageW>
               </div>
-              {/*<div>
-                <Image />
-              </div>
-              <div>
-                <Image />
-              </div>
-              <div>
-                <Image />
-              </div>*/}
             </Slider>
           </SliderW>
           <SkillsList>
