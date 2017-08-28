@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 import ProjectCard from './ProjectCard';
+import { projectsData } from '../lib/projectsData';
 
 const Wrap = styled.div`
   display: flex;
@@ -11,12 +12,17 @@ const Wrap = styled.div`
 `;
 
 class Projects extends Component {
+
+  generateProjects(projects){
+    return projects.map(project => {
+      return <ProjectCard data={project}/>
+    })
+  }
+
   render() {
     return (
       <Wrap>
-        <ProjectCard/>
-        <ProjectCard/>
-        <ProjectCard/>
+        {this.generateProjects(projectsData)}
       </Wrap>
     );
   }
