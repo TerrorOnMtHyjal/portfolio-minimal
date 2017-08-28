@@ -69,11 +69,15 @@ const SliderW = styled.div`
   width: 100%;
 `;
 
-const Image = styled.div`
-  width: 100px;
-  height: 100px;
+const ImageW = styled.div`
+  width: 100%;
+`;
+
+const Image = styled.img`
+  width: 100%;
+  height: auto;
   // background-image: url('${require("../images/pogtracker-2.png")}');
-  background: ${props => props.color};
+  // background-repeat: no-repeat;
   // background-size: contain;
 `;
 
@@ -95,9 +99,30 @@ class ProjectCard extends Component {
           </TopInfo>
           <SliderW>
             <Slider {...sliderSettings}>
-              <div><Image color="red"/></div>
-              <div><Image color="green"/></div>
-              <div><Image color="purple"/></div>
+              <div>
+                <ImageW>
+                  <Image src={require("../images/pogtracker-2.png")}/>
+                </ImageW>
+              </div>
+              <div>
+                <ImageW>
+                  <Image src={require("../images/pogtracker-2.png")}/>
+                </ImageW>
+              </div>
+              <div>
+                <ImageW>
+                  <Image src={require("../images/pogtracker-2.png")}/>
+                </ImageW>
+              </div>
+              {/*<div>
+                <Image />
+              </div>
+              <div>
+                <Image />
+              </div>
+              <div>
+                <Image />
+              </div>*/}
             </Slider>
           </SliderW>
           <SkillsList>

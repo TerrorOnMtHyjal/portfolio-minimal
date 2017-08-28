@@ -9,7 +9,6 @@ const Wrap = styled.div`
   display: flex;
   flex-flow: column;
   width: 100%;
-  border: 1px solid blue;
   font-family: 'Raleway', sans-serif;
   // font-family: 'Josefin Slab', serif;
 `;
