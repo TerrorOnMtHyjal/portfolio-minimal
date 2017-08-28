@@ -11,6 +11,7 @@ export const projectsData = [
       'Twitch API',
       'Express',
       'Node',
+      'React Router 4',
       'MongoDB',
       'Dokku'
     ],

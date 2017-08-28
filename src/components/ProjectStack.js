@@ -19,13 +19,14 @@ const Skill = styled.li`
   align-items: center;
   font-size: 1em;
   padding: 0.25em 0.5em;
-  margin: 0;
+  margin-bottom: 0.5em;
+  margin-right: 0.5em;
   background-color: #1a1a1d;
 `;
 
 const FillerSkill = styled.li`
   height: 0;
-  width: 25%;
+  width: 30%;
 `;
 
 class ProjectStack extends Component {
