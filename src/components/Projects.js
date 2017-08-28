@@ -10,6 +10,7 @@ const Wrap = styled.div`
   flex-flow: column;
   align-items: center;
   width: 100%;
+  background-color: #3feee6;
 
   // &::before {
   //   position: absolute;

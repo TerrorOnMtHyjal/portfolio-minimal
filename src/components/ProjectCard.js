@@ -15,33 +15,32 @@ const Wrap = styled.div`
   width: 100%;
   padding-bottom: 7em;
   // background-color: ${props => props.color};
-  z-index: 1;
 `;
 
 const InnerWrap = styled.div`
-  position: relative;
   display: flex;
   flex-flow: column;
   align-items: center;
   width: 95%;
-  z-index: 1000;
-  background-color: white;
 `;
 
 const TopInfo = styled.div`
   position: relative;
-  width: 100%;
+  left: 0;
+  top: 50%;
+  transform-origin: 0 100%;
+  align-self: flex-start;
+  transform: rotateZ(-3deg);
   margin-bottom: 2em;
-  background-color: #3feee6;
-  z-index: 1;
+  max-width: 85%;
+  color: white;
 
   & > div {
-    position: relative;
     display: flex;
     flex-flow: column;
     align-items: flex-start;
-    z-index: 2;
-    padding: 3em 2.5%;
+    background-color: #1a1a1d;
+    padding: 0.25em 0.5em 0.25em 2em;
 
     & > h2 {
       font-size: 2em;
@@ -55,19 +54,6 @@ const TopInfo = styled.div`
       margin: 0;
       padding: 0;
     }
-  }
-
-  &::before {
-    position: absolute;
-    content: '';
-    right: 0;
-    top: 0;
-    width: 1200vw;
-    height: 30vh;
-    transform: rotateZ(6deg);
-    transform-origin: 100% 50%;
-    background-color: #3feee6;
-    z-index: 1;
   }
 `;
 
