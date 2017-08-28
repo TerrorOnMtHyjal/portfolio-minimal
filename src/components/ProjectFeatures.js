@@ -1,10 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-const Wrap = styled.div`
-
-`;
-
 const Features = styled.ul`
   display: flex;
   flex-flow: column;
@@ -18,6 +14,10 @@ const Features = styled.ul`
 
   & > li {
     margin-bottom: 1em;
+  }
+
+  & > li:nth-child(even){
+    font-weight: 500;
   }
 `;
 

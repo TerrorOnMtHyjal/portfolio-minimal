@@ -12,7 +12,7 @@ const Wrap = styled.div`
   flex-flow: column;
   align-items: center;
   width: 100%;
-  margin-bottom: 7em;
+  padding-bottom: 7em;
   // background-color: ${props => props.color};
 `;
 

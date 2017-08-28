@@ -23,7 +23,7 @@ export const projectsData = [
       'Provides all default emotes for each replay as well as subscriber emotes for partnered channels.',
       'Saves relevant generated data for instant delivery to future users with MongoDB.'
     ],
-    backgroundColor : '#ff00ae',
+    backgroundColor : '#3feee6',
     links : {
       github : 'http://www.github.com/dustwise/pogtracker',
       live: 'http://www.pogtracker.com'
@@ -53,7 +53,7 @@ export const projectsData = [
       'Provides all default emotes for each replay as well as subscriber emotes for partnered channels.',
       'Saves relevant generated data for instant delivery to future users with MongoDB.'
     ],
-    backgroundColor : 'green',
+    backgroundColor : '#18E6DE',
     links : {
       github : 'http://www.github.com/dustwise/pogtracker',
       live: 'http://www.protopage.dustwise.com'
@@ -85,7 +85,7 @@ export const projectsData = [
       'Provides all default emotes for each replay as well as subscriber emotes for partnered channels.',
       'Saves relevant generated data for instant delivery to future users with MongoDB.'
     ],
-    backgroundColor : 'papayawhip',
+    backgroundColor : '#00D6CE',
     links : {
       github : 'http://www.github.com/dustwise/proto-page',
       live: 'http://www.rocketgarage.io'
