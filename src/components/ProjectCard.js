@@ -85,7 +85,8 @@ const sliderSettings = {
   dots: true,
   slidesToShow: 1,
   slidesToScroll: 1,
-  infinite: false
+  infinite: false,
+  arrows: false
 }
 
 class ProjectCard extends Component {
