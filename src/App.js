@@ -6,6 +6,8 @@ import Projects from './components/Projects';
 import SocialCard from './components/SocialCard';
 
 const Wrap = styled.div`
+  position: relative;
+  overflow-x: hidden;
   display: flex;
   flex-flow: column;
   width: 100%;
