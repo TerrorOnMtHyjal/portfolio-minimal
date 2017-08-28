@@ -36,15 +36,15 @@ class SocialCard extends Component {
       <Wrap>
         <InnerWrap>
 
-          <a href="http://www.github.com/dustwise" target="_blank">
+          <a href="http://www.github.com/dustwise" target="_blank" rel="noopener noreferrer">
             <i className="fa fa-github" aria-hidden="true"/>
           </a>
 
-          <a href="http://www.linkedin.com/in/jaredmohney" target="_blank">
+          <a href="http://www.linkedin.com/in/jaredmohney" target="_blank" rel="noopener noreferrer">
             <i className="fa fa-linkedin" aria-hidden="true"/>
           </a>
 
-          <a href="mailto:jared.mohney@gmail.com?Subject=Hello%20Jared" target="_blank">
+          <a href="mailto:jared.mohney@gmail.com?Subject=Hello%20Jared" target="_blank" rel="noopener noreferrer">
             <i className="fa fa-envelope" aria-hidden="true"/>
           </a>
 

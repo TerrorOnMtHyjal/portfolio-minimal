@@ -14,8 +14,8 @@ const Wrap = styled.div`
 class Projects extends Component {
 
   generateProjects(projects){
-    return projects.map(project => {
-      return <ProjectCard data={project}/>
+    return projects.map((project, index) => {
+      return <ProjectCard key={ "project" + index }data={ project }/>
     })
   }
 

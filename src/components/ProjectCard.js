@@ -1,11 +1,8 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-import Slider from 'react-slick';
+import ImageSlider from './ImageSlider';
 import ProjectStack from './ProjectStack';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import '../styles/slider.css';
 
 
 const Wrap = styled.div`
@@ -14,6 +11,7 @@ const Wrap = styled.div`
   align-items: center;
   width: 100%;
   margin: 1em 0;
+  // background-color: ${props => props.color};
 `;
 
 const InnerWrap = styled.div`
@@ -43,58 +41,16 @@ const TopInfo = styled.div`
   }
 `;
 
-const SliderW = styled.div`
-  width: 100%;
-`;
-
-const ImageW = styled.div`
-  width: 100%;
-`;
-
-const Image = styled.img`
-  width: 100%;
-  height: auto;
-  // background-image: url('${require("../images/pogtracker-2.png")}');
-  // background-repeat: no-repeat;
-  // background-size: contain;
-`;
-
-const sliderSettings = {
-  dots: true,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  infinite: false,
-  arrows: false
-}
-
 class ProjectCard extends Component {
   render() {
     return (
-      <Wrap>
+      <Wrap color={this.props.data.backgroundColor}>
         <InnerWrap>
           <TopInfo>
             <h2>{this.props.data.title}</h2>
             <h3>{this.props.data.tagline}</h3>
           </TopInfo>
-          <SliderW>
-            <Slider {...sliderSettings}>
-              <div>
-                <ImageW>
-                  <Image src={require("../images/pogtracker-2.png")}/>
-                </ImageW>
-              </div>
-              <div>
-                <ImageW>
-                  <Image src={require("../images/pogtracker-2.png")}/>
-                </ImageW>
-              </div>
-              <div>
-                <ImageW>
-                  <Image src={require("../images/pogtracker-2.png")}/>
-                </ImageW>
-              </div>
-            </Slider>
-          </SliderW>
+          <ImageSlider images={this.props.data.images}/>
           <ProjectStack stack={this.props.data.stack}/>
         </InnerWrap>
       </Wrap>
