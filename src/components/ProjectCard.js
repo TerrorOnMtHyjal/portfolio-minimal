@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import ImageSlider from './ImageSlider';
 import ProjectStack from './ProjectStack';
 import ProjectLinks from './ProjectLinks';
+import ProjectFeatures from './ProjectFeatures';
 
 
 const Wrap = styled.div`
@@ -11,7 +12,7 @@ const Wrap = styled.div`
   flex-flow: column;
   align-items: center;
   width: 100%;
-  margin: 1em 0;
+  margin-bottom: 7em;
   // background-color: ${props => props.color};
 `;
 
@@ -27,6 +28,7 @@ const TopInfo = styled.div`
   flex-flow: column;
   align-items: flex-start;
   width: 100%;
+  margin-bottom: 2em;
 
   & > h2 {
     font-size: 2em;
@@ -44,7 +46,7 @@ const TopInfo = styled.div`
 
 class ProjectCard extends Component {
   render() {
-    const { backgroundColor, title, tagline, images, stack, links} = this.props.data;
+    const { backgroundColor, title, tagline, images, stack, links, features } = this.props.data;
 
     return (
       <Wrap color={ backgroundColor }>
@@ -55,6 +57,7 @@ class ProjectCard extends Component {
           </TopInfo>
           <ImageSlider images={ images } />
           <ProjectStack stack={ stack } />
+          <ProjectFeatures features={ features }/>
           <ProjectLinks links={ links } />
         </InnerWrap>
       </Wrap>

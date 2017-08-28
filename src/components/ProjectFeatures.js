@@ -6,24 +6,34 @@ const Wrap = styled.div`
 `;
 
 const Features = styled.ul`
+  display: flex;
+  flex-flow: column;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  list-style-type: none;
+  color: black;
+  font-weight: 300;
+  margin-bottom: 2em;
 
+  & > li {
+    margin-bottom: 1em;
+  }
 `;
 
 class ProjectFeatures extends Component {
 
   generateFeatures(features){
     return features.map((feature, index) => {
-      return <li key={index}>{feature}</li>
+      return <li key={index}>- {feature}</li>
     });
   }
 
   render() {
     return (
-      <Wrap>
-        <Features>
-
-        </Features>
-      </Wrap>
+      <Features>
+        {this.generateFeatures(this.props.features)}
+      </Features>
     );
   }
 }

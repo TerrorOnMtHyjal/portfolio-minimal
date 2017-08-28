@@ -10,7 +10,7 @@ const SkillsList = styled.ul`
   width: 100%;
   list-style-type: none;
   color: white;
-  margin-top: 5vh;
+  margin-bottom: 2em;
 `;
 
 const Skill = styled.li`

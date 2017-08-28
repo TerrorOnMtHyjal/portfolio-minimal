@@ -4,10 +4,10 @@ import Slider from 'react-slick';
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import '../styles/slider.css';
 
 const SliderW = styled.div`
   width: 100%;
+  margin-bottom: 3em;
 `;
 
 const ImageW = styled.div`
