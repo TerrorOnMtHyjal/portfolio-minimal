@@ -11,16 +11,16 @@ const Wrap = styled.div`
   align-items: center;
   width: 100%;
 
-  &::before {
-    position: absolute;
-    content: '';
-    width: 120vw;
-    height: 25vh;
-    transform: rotateZ(6deg);
-    transform-origin: 100% 0;
-    background-color: white;
-    z-index: 2;
-  }
+  // &::before {
+  //   position: absolute;
+  //   content: '';
+  //   width: 120vw;
+  //   height: 25vh;
+  //   transform: rotateZ(6deg);
+  //   transform-origin: 100% 0;
+  //   background-color: white;
+  //   z-index: 2;
+  // }
 
   & > div {
     z-index: 3;

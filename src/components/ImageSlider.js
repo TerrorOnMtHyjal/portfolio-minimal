@@ -7,6 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 const SliderW = styled.div`
   width: 100%;
+  margin-top: 2em;
   margin-bottom: 3em;
 `;
 
