@@ -13,7 +13,10 @@ const Button = styled.a`
   width: 50%;
   padding: 1em 2em;
   margin: 1em;
-  background-color: green;
+  border: 2px solid green;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 700;
+  color: green;
 `;
 
 class ProjectLinks extends Component {
@@ -21,10 +24,10 @@ class ProjectLinks extends Component {
     return (
       <Wrap>
         <Button href={this.props.links.github} target="_blank" rel="noopener noreferrer">
-          Github
+          GITHUB
         </Button>
         <Button href={this.props.links.live} target="_blank" rel="noopener noreferrer">
-          Live
+          LIVE
         </Button>
       </Wrap>
     );

@@ -23,7 +23,7 @@ const Wrap = styled.div`
   align-items: center;
   width: 100%;
   padding-top: 2em;
-  // padding-bottom: 7em;
+  padding-bottom: 20vh;
   // background-color: ${props => props.color};
 `;
 
@@ -33,7 +33,7 @@ const SectionWrap = styled.div`
   align-items: center;
   width: 100%;
   z-index: 3;
-  background-color: ${props => props.color};
+  // background-color: ${props => props.color};
 `;
 
 const InnerWrap = styled.div`
@@ -45,9 +45,9 @@ const InnerWrap = styled.div`
 
 const TopInfo = styled.div`
   align-self: flex-start;
-  padding-left: 0.5em;
   margin-bottom: 2em;
-  border-left: 2px solid black;
+  // padding-left: 0.5em;
+  // border-left: 2px solid black;
 
   & > div {
     display: flex;
@@ -55,14 +55,14 @@ const TopInfo = styled.div`
     align-items: flex-start;
 
     & > h2 {
-      font-size: 2em;
+      font-size: 3em;
       font-weight: 800;
       margin: 0;
       padding: 0;
     }
 
     & > h3 {
-      font-size: 1em;
+      font-size: 1.5em;
       font-weight: 400;
       margin: 0;
       padding: 0;
@@ -75,7 +75,7 @@ class ProjectCard extends Component {
     const { backgroundColor, title, tagline, images, stack, links, features } = this.props.data;
 
     return (
-      <Wrap color="white">
+      <Wrap color={backgroundColor}>
         <SectionWrap color="white">
           <InnerWrap>
 
@@ -91,7 +91,7 @@ class ProjectCard extends Component {
         </SectionWrap>
 
         <SectionWrap color="white">
-            <ImageSlider images={ images } />
+          <ImageSlider images={ images } />
           <InnerWrap>
             <ProjectFeatures features={ features }/>
             <ProjectLinks links={ links } />
