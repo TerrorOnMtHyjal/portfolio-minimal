@@ -22,24 +22,15 @@ const Wrap = styled.div`
   flex-flow: column;
   align-items: center;
   width: 100%;
+  padding-top: 2em;
   // padding-bottom: 7em;
   // background-color: ${props => props.color};
-
-  &::before {
-    position: absolute;
-    content: '';
-    width: 120vw;
-    height: 25vh;
-    transform: rotateZ(6deg);
-    transform-origin: 100% 0;
-    background-color: ${props => props.color};
-    z-index: 2;
-  }
 `;
 
 const SectionWrap = styled.div`
   display: flex;
-  justify-content: center;
+  flex-flow: column;
+  align-items: center;
   width: 100%;
   z-index: 3;
   background-color: ${props => props.color};
@@ -99,13 +90,11 @@ class ProjectCard extends Component {
           </InnerWrap>
         </SectionWrap>
 
-        <SectionWrap color="#42424A">
-          <InnerWrap>
-
+        <SectionWrap color="white">
             <ImageSlider images={ images } />
+          <InnerWrap>
             <ProjectFeatures features={ features }/>
             <ProjectLinks links={ links } />
-
           </InnerWrap>
         </SectionWrap>
       </Wrap>

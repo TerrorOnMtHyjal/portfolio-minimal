@@ -8,7 +8,7 @@ const Features = styled.ul`
   margin: 0;
   width: 100%;
   list-style-type: none;
-  color: white;
+  color: black;
   font-weight: 300;
   margin-bottom: 2em;
 
