@@ -25,22 +25,13 @@ const InnerWrap = styled.div`
 `;
 
 const TopInfo = styled.div`
-  position: relative;
-  left: 0;
-  top: 50%;
-  transform-origin: 0 100%;
   align-self: flex-start;
-  transform: rotateZ(-3deg);
   margin-bottom: 2em;
-  max-width: 85%;
-  color: white;
 
   & > div {
     display: flex;
     flex-flow: column;
     align-items: flex-start;
-    background-color: #1a1a1d;
-    padding: 0.25em 0.5em 0.25em 2em;
 
     & > h2 {
       font-size: 2em;

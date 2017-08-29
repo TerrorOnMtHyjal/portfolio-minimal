@@ -10,18 +10,17 @@ const Wrap = styled.div`
   flex-flow: column;
   align-items: center;
   width: 100%;
-  background-color: #3feee6;
 
-  // &::before {
-  //   position: absolute;
-  //   content: '';
-  //   width: 120vw;
-  //   height: 25vh;
-  //   transform: rotateZ(6deg);
-  //   transform-origin: 100% 0;
-  //   background-color: white;
-  //   z-index: 2;
-  // }
+  &::before {
+    position: absolute;
+    content: '';
+    width: 120vw;
+    height: 25vh;
+    transform: rotateZ(6deg);
+    transform-origin: 100% 0;
+    background-color: white;
+    z-index: 2;
+  }
 
   & > div {
     z-index: 3;
