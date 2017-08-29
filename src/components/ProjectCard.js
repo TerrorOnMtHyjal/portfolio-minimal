@@ -26,7 +26,9 @@ const InnerWrap = styled.div`
 
 const TopInfo = styled.div`
   align-self: flex-start;
+  padding-left: 0.5em;
   margin-bottom: 2em;
+  border-left: 2px solid black;
 
   & > div {
     display: flex;
@@ -54,15 +56,15 @@ class ProjectCard extends Component {
 
     return (
       <Wrap color={ backgroundColor }>
-        <TopInfo>
-          <div>
-            <h2>{ title }</h2>
-            <h3>{ tagline }</h3>
-          </div>
-        </TopInfo>
         <InnerWrap>
-          <ImageSlider images={ images } />
+          <TopInfo>
+            <div>
+              <h2>{ title }</h2>
+              <h3>{ tagline }</h3>
+            </div>
+          </TopInfo>
           <ProjectStack stack={ stack } />
+          <ImageSlider images={ images } />
           <ProjectFeatures features={ features }/>
           <ProjectLinks links={ links } />
         </InnerWrap>
