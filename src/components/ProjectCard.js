@@ -41,6 +41,9 @@ const InnerWrap = styled.div`
   flex-flow: column;
   align-items: center;
   width: 95%;
+  border-left: ${props => props.bordered && "2px solid #fc4445"};
+  padding-left: ${props => props.bordered && "1em"};
+  margin-bottom: ${props => props.bordered && "2em"};
 `;
 
 const TopInfo = styled.div`
@@ -77,7 +80,7 @@ class ProjectCard extends Component {
     return (
       <Wrap color={backgroundColor}>
         <SectionWrap color="white">
-          <InnerWrap>
+          <InnerWrap bordered>
 
             <TopInfo>
               <div>

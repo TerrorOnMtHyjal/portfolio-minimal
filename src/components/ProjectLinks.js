@@ -10,13 +10,14 @@ const Button = styled.a`
   color: white;
   text-decoration: none;
   text-align: center;
-  width: 50%;
+  flex-basis: 0;
+  flex-grow: 1;
   padding: 1em 2em;
   margin: 1em;
-  border: 2px solid green;
+  border: 2px solid #55bcc9;
   font-family: 'Roboto Slab', serif;
   font-weight: 700;
-  color: green;
+  color: #55bcc9;
 `;
 
 class ProjectLinks extends Component {

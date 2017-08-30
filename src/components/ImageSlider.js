@@ -7,11 +7,14 @@ import "slick-carousel/slick/slick-theme.css";
 
 const SliderW = styled.div`
   width: 100%;
+  background-color: #1a1a1d;
   margin-bottom: 3em;
 `;
 
 const ImageW = styled.div`
+  box-sizing: content-box;
   width: 100%;
+  padding-right: 2em;
 `;
 
 const Image = styled.img`

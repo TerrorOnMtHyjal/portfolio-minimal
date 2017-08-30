@@ -20,6 +20,7 @@ const Wrap = styled.div`
 const Features = styled.ul`
   display: flex;
   flex-flow: column;
+  align-items: center;
   padding: 0;
   margin: 0;
   width: 100%;
@@ -30,6 +31,7 @@ const Features = styled.ul`
   font-size: 0.9em;
 
   & > li {
+    width: 90%;
     margin-bottom: 1em;
   }
 
