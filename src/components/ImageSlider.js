@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 const SliderW = styled.div`
   width: 100%;
-  background-color: #1a1a1d;
+  background-color: black;
   background-image: url("https://www.transparenttextures.com/patterns/shattered.png");
   margin-bottom: 3em;
 

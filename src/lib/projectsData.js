@@ -40,16 +40,17 @@ export const projectsData = [
     ],
     stack: [
       'Google Fonts API',
+      'Web Font Loader',
       'React',
       'Redux'
     ],
     features: [
-      'Utilizes multiple Twitch APIs to gather channel and replay chat data of a provided broadcast replay.',
-      'Scans JSON for emote usage and generates timestamps for bursts of individual emotes.',
-      'Frontend converts timestamps to buttons, integrated with twitch embedded player.',
-      'The more active the chat, the better the results. Can easily handle a chat with tens of thousands of users.',
-      'Provides all default emotes for each replay as well as subscriber emotes for partnered channels.',
-      'Saves relevant generated data for instant delivery to future users with MongoDB.'
+      'Randomize through Google Fonts limiting by font type (sans-serif, handwriting, etc.) per element.',
+      'Instantly get a feel for what pairings would look like on the totally real cloud-delivered meat startup page',
+      'Look through all available font variants, per font. 100 italic? 900 regular? We got you!',
+      'Limit your search to popular fonts, the top 30% per category as determined by Google',
+      'Find a font you like? Lock it in and continue to randomize the other elements',
+      'Got your fonts? Grab your css and get back to the fun stuff',
     ],
     backgroundColor : '#18E6DE',
     links : {

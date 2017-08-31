@@ -59,8 +59,6 @@ const FeaturesLinks = styled.div`
 const TopInfo = styled.div`
   align-self: flex-start;
   margin-bottom: 2em;
-  // padding-left: 0.5em;
-  // border-left: 2px solid black;
 
   & > div {
     display: flex;
