@@ -10,6 +10,7 @@ const Wrap = styled.div`
   flex-flow: column;
   align-items: center;
   width: 100%;
+  background-color: white;
 
   &::before {
     position: absolute;
@@ -19,11 +20,6 @@ const Wrap = styled.div`
     transform: rotateZ(6deg);
     transform-origin: 100% 0;
     background-color: white;
-    z-index: 2;
-  }
-
-  & > div {
-    z-index: 3;
   }
 `;
 

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components';
 
 const Wrap = styled.div`
+  position: relative;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -11,6 +12,18 @@ const Wrap = styled.div`
   background-color: #3feee6;
   font-size: 3em;
   color: white;
+
+  &::before {
+    position: absolute;
+    top: 0;
+    right: 0;
+    content: '';
+    width: 120vw;
+    height: 25vh;
+    transform: rotateZ(6deg);
+    transform-origin: 100% 0;
+    background-color: #3feee6;
+  }
 `;
 
 const InnerWrap = styled.div`

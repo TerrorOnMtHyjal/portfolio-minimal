@@ -23,7 +23,7 @@ const Wrap = styled.div`
   align-items: center;
   width: 100%;
   padding-top: 2em;
-  padding-bottom: 20vh;
+  padding-bottom: 10vh;
   // background-color: ${props => props.color};
 `;
 
@@ -32,7 +32,6 @@ const SectionWrap = styled.div`
   flex-flow: column;
   align-items: center;
   width: 100%;
-  z-index: 3;
   // background-color: ${props => props.color};
 `;
 

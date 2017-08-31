@@ -6,13 +6,11 @@ import Projects from './components/Projects';
 import SocialCard from './components/SocialCard';
 
 const Wrap = styled.div`
-  position: relative;
+  width: 100%;
   overflow-x: hidden;
   display: flex;
   flex-flow: column;
-  width: 100%;
   font-family: 'Raleway', sans-serif;
-  // font-family: 'Josefin Slab', serif;
 `;
 
 class App extends Component {
