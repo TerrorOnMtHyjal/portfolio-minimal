@@ -12,7 +12,7 @@ const Wrap = styled.div`
 
     & > i {
       margin-right: 0.5em;
-      color: #fc4445;
+      color: ${props => props.theme.primary};
     }
   }
 `;

@@ -9,7 +9,7 @@ const Wrap = styled.div`
   width: 100%;
   height: 100vh;
   color: #1a1a1d;
-  background-color: #fc4445;
+  background-color: ${props => props.theme.primary};
   font-size: 1em;
 
   clip-path: polygon(

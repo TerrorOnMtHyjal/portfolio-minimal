@@ -28,10 +28,10 @@ const Button = styled.a`
   flex-grow: 1;
   padding: 1em 2em;
   margin: 1em;
-  border: 2px solid #55bcc9;
+  border: 2px solid ${props => props.theme.accent};
   font-family: 'Roboto Slab', serif;
   font-weight: 700;
-  color: #55bcc9;
+  color: ${props => props.theme.accent};
 
   @media screen and (min-width: 736px){
     margin: 0 2em 0 0;

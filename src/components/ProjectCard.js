@@ -22,7 +22,7 @@ const InnerWrap = styled.div`
   flex-flow: column;
   align-items: center;
   width: 95%;
-  border-left: ${props => props.bordered && "0.2em solid #fc4445"};
+  border-left: ${props => props.bordered && '0.2em solid ' + props.theme.primary};
   padding-left: ${props => props.bordered && "1em"};
   margin-bottom: ${props => props.bordered && "4em"};
 

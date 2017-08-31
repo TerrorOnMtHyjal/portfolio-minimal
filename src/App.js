@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
+import styled, { ThemeProvider } from 'styled-components';
 
 import TopCard from './components/TopCard';
 import Projects from './components/Projects';
@@ -13,6 +13,14 @@ import SocialCard from './components/SocialCard';
 #cafafe muted light blue
 #1a1a1d dark gray
 */
+
+const defaultTheme = {
+  primary: '#fc4445',
+  accent: '#55bcc9',
+  highlight: 'white',
+  text: 'white',
+  highlightText: 'white'
+};
 
 const Wrap = styled.div`
   width: 100%;
@@ -30,11 +38,13 @@ const Wrap = styled.div`
 class App extends Component {
   render() {
     return (
-      <Wrap>
-        <TopCard/>
-        <Projects/>
-        <SocialCard/>
-      </Wrap>
+      <ThemeProvider theme={defaultTheme}>
+        <Wrap>
+          <TopCard/>
+          <Projects/>
+          <SocialCard/>
+        </Wrap>
+      </ThemeProvider>
     );
   }
 }
