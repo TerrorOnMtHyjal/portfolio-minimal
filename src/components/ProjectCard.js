@@ -42,7 +42,12 @@ const InnerWrap = styled.div`
   width: 95%;
   border-left: ${props => props.bordered && "2px solid #fc4445"};
   padding-left: ${props => props.bordered && "1em"};
-  margin-bottom: ${props => props.bordered && "2em"};
+  margin-bottom: ${props => props.bordered && "4em"};
+
+  @media screen and (min-width: 1024px){
+    border-left: ${props => props.bordered && "4px solid #fc4445"};
+    width: 80%;
+  }
 `;
 
 const TopInfo = styled.div`
@@ -79,7 +84,6 @@ class ProjectCard extends Component {
 
     return (
       <Wrap color={backgroundColor}>
-        <SectionWrap color="white">
           <InnerWrap bordered>
 
             <TopInfo>
@@ -91,15 +95,14 @@ class ProjectCard extends Component {
             <ProjectStack stack={ stack } />
 
           </InnerWrap>
-        </SectionWrap>
 
-        <SectionWrap color="white">
-          <ImageSlider images={ images } />
           <InnerWrap>
+
+            <ImageSlider images={ images } />
             <ProjectFeatures features={ features }/>
             <ProjectLinks links={ links } />
+
           </InnerWrap>
-        </SectionWrap>
       </Wrap>
     );
   }

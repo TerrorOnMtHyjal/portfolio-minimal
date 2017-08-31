@@ -34,6 +34,10 @@ const InnerWrap = styled.div`
   flex-flow: column;
   justify-content: center;
   width: 95%;
+
+  @media screen and (min-width: 1024px){
+    width: 80%;
+  }
 `;
 
 const TopInfo = styled.div`
@@ -41,8 +45,10 @@ const TopInfo = styled.div`
   flex-flow: column;
   align-items: flex-end;
   width: 100%;
+  text-align: right;
 
   & > h1 {
+    font-family: 'Roboto Slab', serif;
     font-size: 2em;
     margin: 0;
     padding: 0;
@@ -62,6 +68,20 @@ const TopInfo = styled.div`
     color: white;
     margin: 0;
     padding: 0;
+  }
+
+  @media screen and (min-width: 1024px){
+    & > h1 {
+      font-size: 3em;
+    }
+
+    & > h3 {
+      font-size: 1.5em;
+    }
+
+    & > p {
+      font-size: 1em;
+    }
   }
 `;
 

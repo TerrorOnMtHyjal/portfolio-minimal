@@ -38,6 +38,12 @@ const Features = styled.ul`
   // & > li:nth-child(even){
   //   font-weight: 500;
   // }
+
+  @media screen and (min-width: 1024px){
+    & > li {
+      width: 100%;
+    }
+  }
 `;
 
 class ProjectFeatures extends Component {

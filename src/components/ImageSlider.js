@@ -9,12 +9,20 @@ const SliderW = styled.div`
   width: 100%;
   background-color: #1a1a1d;
   margin-bottom: 3em;
+
+  @media screen and (min-width: 1024px){
+    background-color: transparent;
+  }
 `;
 
 const ImageW = styled.div`
   box-sizing: content-box;
   width: 100%;
-  padding-right: 2em;
+
+  @media screen and (min-width: 1024px){
+    width: 95%;
+    margin: 0 auto;
+  }
 `;
 
 const Image = styled.img`
@@ -24,10 +32,17 @@ const Image = styled.img`
 
 const sliderSettings = {
   dots: true,
-  slidesToShow: 1,
+  slidesToShow: 2,
   slidesToScroll: 1,
   infinite: false,
-  arrows: false
+  arrows: false,
+  responsive: [ 
+    { breakpoint: 1024, 
+      settings: { 
+        slidesToShow: 1
+      } 
+    }
+  ]
 }
 
 class ImageSlider extends Component {

@@ -11,6 +11,7 @@ const Wrap = styled.div`
   align-items: center;
   width: 100%;
   background-color: white;
+  padding-top: 10vh;
 `;
 
 class Projects extends Component {

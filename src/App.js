@@ -11,6 +11,11 @@ const Wrap = styled.div`
   display: flex;
   flex-flow: column;
   font-family: 'Raleway', sans-serif;
+  font-size: 1rem;
+
+  @media screen and (min-width: 1024px){
+    font-size: 1.25rem;
+  }
 `;
 
 class App extends Component {
