@@ -57,6 +57,7 @@ const TopInfo = styled.div`
     align-items: flex-start;
 
     & > h2 {
+      font-family: 'Roboto Slab', serif;
       font-size: 3em;
       font-weight: 800;
       margin: 0;

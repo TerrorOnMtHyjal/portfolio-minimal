@@ -20,6 +20,13 @@ const Wrap = styled.div`
   color: #1a1a1d;
   background-color: #fc4445;
   font-size: 1em;
+
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 100%,
+    0 calc(100% - 6vw)
+  );
 `;
 
 const InnerWrap = styled.div`

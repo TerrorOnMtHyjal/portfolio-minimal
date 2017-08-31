@@ -11,16 +11,6 @@ const Wrap = styled.div`
   align-items: center;
   width: 100%;
   background-color: white;
-
-  &::before {
-    position: absolute;
-    content: '';
-    width: 120vw;
-    height: 25vh;
-    transform: rotateZ(6deg);
-    transform-origin: 100% 0;
-    background-color: white;
-  }
 `;
 
 class Projects extends Component {

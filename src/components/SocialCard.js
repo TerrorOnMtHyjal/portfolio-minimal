@@ -13,17 +13,12 @@ const Wrap = styled.div`
   font-size: 3em;
   color: white;
 
-  &::before {
-    position: absolute;
-    top: 0;
-    right: 0;
-    content: '';
-    width: 120vw;
-    height: 25vh;
-    transform: rotateZ(6deg);
-    transform-origin: 100% 0;
-    background-color: #3feee6;
-  }
+  clip-path: polygon(
+    0 0,
+    100% 6vw,
+    100% 100%,
+    0 100%
+  );
 `;
 
 const InnerWrap = styled.div`
