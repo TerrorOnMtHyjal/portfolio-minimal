@@ -12,6 +12,7 @@ const SliderW = styled.div`
 
   @media screen and (min-width: 1024px){
     background-color: transparent;
+    width: 80%;
   }
 `;
 

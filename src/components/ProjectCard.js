@@ -100,8 +100,8 @@ class ProjectCard extends Component {
           <ProjectStack stack={ stack } />
         </InnerWrap>
 
+        <ImageSlider images={ images } />
         <InnerWrap>
-          <ImageSlider images={ images } />
           <ProjectFeatures features={ features }/>
           <ProjectLinks links={ links } />
         </InnerWrap>

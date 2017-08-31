@@ -26,13 +26,12 @@ const Features = styled.ul`
   width: 100%;
   color: black;
   font-weight: 300;
-  margin-left: 1em;
   margin-bottom: 2em;
   font-size: 0.9em;
   list-style-position: inside;
 
   & > li {
-    width: 90%;
+    width: 98%;
     margin-bottom: 1em;
   }
 
@@ -41,6 +40,8 @@ const Features = styled.ul`
   // }
 
   @media screen and (min-width: 1024px){
+    margin-left: 1em;
+
     & > li {
       width: 100%;
     }
