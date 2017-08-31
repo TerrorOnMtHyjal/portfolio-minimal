@@ -8,11 +8,14 @@ import "slick-carousel/slick/slick-theme.css";
 const SliderW = styled.div`
   width: 100%;
   background-color: #1a1a1d;
+  background-image: url("https://www.transparenttextures.com/patterns/shattered.png");
   margin-bottom: 3em;
 
   @media screen and (min-width: 1024px){
-    background-color: transparent;
-    width: 80%;
+    & > div {
+        margin: 0 auto;
+        width: 80%;
+    }
   }
 `;
 
