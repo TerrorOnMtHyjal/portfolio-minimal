@@ -55,7 +55,7 @@ export const projectsData = [
     backgroundColor : '#18E6DE',
     links : {
       github : 'http://www.github.com/dustwise/pogtracker',
-      live: 'http://www.protopage.dustwise.com'
+      live: 'http://protopage.dustwise.com'
     }
   },
 
@@ -85,7 +85,7 @@ export const projectsData = [
     ],
     backgroundColor : '#00D6CE',
     links : {
-      github : 'http://www.github.com/dustwise/proto-page',
+      github : 'http://www.github.com/dustwise/Rocket-Garage',
       live: 'http://www.rocketgarage.io'
     }
   }
