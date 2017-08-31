@@ -50,6 +50,12 @@ const InnerWrap = styled.div`
   }
 `;
 
+const FeaturesLinks = styled.div`
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+`;
+
 const TopInfo = styled.div`
   align-self: flex-start;
   margin-bottom: 2em;
@@ -85,7 +91,6 @@ class ProjectCard extends Component {
     return (
       <Wrap color={backgroundColor}>
           <InnerWrap bordered>
-
             <TopInfo>
               <div>
                 <h2>{ title }</h2>
@@ -93,15 +98,12 @@ class ProjectCard extends Component {
               </div>
             </TopInfo>
             <ProjectStack stack={ stack } />
-
           </InnerWrap>
 
           <InnerWrap>
-
             <ImageSlider images={ images } />
             <ProjectFeatures features={ features }/>
             <ProjectLinks links={ links } />
-
           </InnerWrap>
       </Wrap>
     );
