@@ -36,16 +36,16 @@ const SectionWrap = styled.div`
 `;
 
 const InnerWrap = styled.div`
+  position: relative;
   display: flex;
   flex-flow: column;
   align-items: center;
   width: 95%;
-  border-left: ${props => props.bordered && "2px solid #fc4445"};
+  border-left: ${props => props.bordered && "0.2em solid #fc4445"};
   padding-left: ${props => props.bordered && "1em"};
   margin-bottom: ${props => props.bordered && "4em"};
 
   @media screen and (min-width: 1024px){
-    border-left: ${props => props.bordered && "4px solid #fc4445"};
     width: 80%;
   }
 `;
@@ -90,21 +90,21 @@ class ProjectCard extends Component {
 
     return (
       <Wrap color={backgroundColor}>
-          <InnerWrap bordered>
-            <TopInfo>
-              <div>
-                <h2>{ title }</h2>
-                <h3>{ tagline }</h3>
-              </div>
-            </TopInfo>
-            <ProjectStack stack={ stack } />
-          </InnerWrap>
+        <InnerWrap bordered>
+          <TopInfo>
+            <div>
+              <h2>{ title }</h2>
+              <h3>{ tagline }</h3>
+            </div>
+          </TopInfo>
+          <ProjectStack stack={ stack } />
+        </InnerWrap>
 
-          <InnerWrap>
-            <ImageSlider images={ images } />
-            <ProjectFeatures features={ features }/>
-            <ProjectLinks links={ links } />
-          </InnerWrap>
+        <InnerWrap>
+          <ImageSlider images={ images } />
+          <ProjectFeatures features={ features }/>
+          <ProjectLinks links={ links } />
+        </InnerWrap>
       </Wrap>
     );
   }

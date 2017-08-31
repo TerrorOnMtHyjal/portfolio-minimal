@@ -24,11 +24,12 @@ const Features = styled.ul`
   padding: 0;
   margin: 0;
   width: 100%;
-  list-style-type: none;
   color: black;
   font-weight: 300;
+  margin-left: 1em;
   margin-bottom: 2em;
   font-size: 0.9em;
+  list-style-position: inside;
 
   & > li {
     width: 90%;
@@ -50,7 +51,7 @@ class ProjectFeatures extends Component {
 
   generateFeatures(features){
     return features.map((feature, index) => {
-      return <li key={index}>- {feature}</li>
+      return <li key={index}>{feature}</li>
     });
   }
 

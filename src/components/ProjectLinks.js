@@ -4,6 +4,20 @@ import styled from 'styled-components';
 const Wrap = styled.div`
   width: 100%;
   display: flex;
+  justify-content: space-around;
+
+  @media screen and (min-width: 600px){
+    width: 80%;
+    align-self: flex-start;
+  }
+
+  @media screen and (min-width: 736px){
+    width: 60%;
+  }
+
+  @media screen and (min-width: 1366px){
+    width: 40%;
+  }
 `;
 
 const Button = styled.a`
@@ -18,6 +32,10 @@ const Button = styled.a`
   font-family: 'Roboto Slab', serif;
   font-weight: 700;
   color: #55bcc9;
+
+  @media screen and (min-width: 736px){
+    margin: 0 2em 0 0;
+  }
 `;
 
 class ProjectLinks extends Component {

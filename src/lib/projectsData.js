@@ -35,6 +35,7 @@ export const projectsData = [
     title: 'ProtoPage',
     tagline: 'Find Google Fonts pairings quickly with our prototype startup page',
     images: [
+      require('../images/protopage-min.png'),
       require('../images/protopage-min.png')
     ],
     stack: [
@@ -63,6 +64,7 @@ export const projectsData = [
     title: 'Rocket Garage',
     tagline: 'Redefining digital item trading for the Rocket League community',
     images: [
+      require('../images/rocket-garage-cropped-2.png'),
       require('../images/rocket-garage-cropped-2.png')
     ],
     stack: [
