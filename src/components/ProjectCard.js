@@ -6,16 +6,6 @@ import ProjectStack from './ProjectStack';
 import ProjectLinks from './ProjectLinks';
 import ProjectFeatures from './ProjectFeatures';
 
-/*
-#fc4445 red 
-#3feee6 bright teal 
-#55bcc9 muted teal 
-#97caef muted dark blue 
-#cafafe muted light blue
-#1a1a1d dark gray
-*/
-
-
 const Wrap = styled.div`
   position: relative;
   display: flex;
@@ -24,15 +14,6 @@ const Wrap = styled.div`
   width: 100%;
   padding-top: 2em;
   padding-bottom: 10vh;
-  // background-color: ${props => props.color};
-`;
-
-const SectionWrap = styled.div`
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  width: 100%;
-  // background-color: ${props => props.color};
 `;
 
 const InnerWrap = styled.div`
@@ -48,12 +29,7 @@ const InnerWrap = styled.div`
   @media screen and (min-width: 1024px){
     width: 80%;
   }
-`;
 
-const FeaturesLinks = styled.div`
-  width: 100%;
-  display: flex;
-  flex-flow: column;
 `;
 
 const TopInfo = styled.div`
@@ -99,6 +75,7 @@ class ProjectCard extends Component {
         </InnerWrap>
 
         <ImageSlider images={ images } />
+
         <InnerWrap>
           <ProjectFeatures features={ features }/>
           <ProjectLinks links={ links } />

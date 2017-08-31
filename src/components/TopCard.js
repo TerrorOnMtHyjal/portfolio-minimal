@@ -1,15 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
-/*
-#fc4445 red 
-#3feee6 bright teal 
-#55bcc9 muted teal 
-#97caef muted dark blue 
-#cafafe muted light blue
-#1a1a1d dark gray
-*/
-
 const Wrap = styled.div`
   display: flex;
   flex-flow: column;

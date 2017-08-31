@@ -19,7 +19,7 @@ class Projects extends Component {
   generateProjects(projects){
     return projects.map((project, index) => {
       return <ProjectCard key={ "project" + index } data={ project }/>
-    })
+    });
   }
 
   render() {

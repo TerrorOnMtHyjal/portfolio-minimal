@@ -59,8 +59,8 @@ class ImageSlider extends Component {
             <Image src={image}/>
           </ImageW>
         </div>
-      )
-    })
+      );
+    });
   }
 
   render() {

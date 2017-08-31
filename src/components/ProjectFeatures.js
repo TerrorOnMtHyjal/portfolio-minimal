@@ -35,10 +35,6 @@ const Features = styled.ul`
     margin-bottom: 1em;
   }
 
-  // & > li:nth-child(even){
-  //   font-weight: 500;
-  // }
-
   @media screen and (min-width: 1024px){
     margin-left: 1em;
 
@@ -59,10 +55,13 @@ class ProjectFeatures extends Component {
   render() {
     return (
       <Wrap>
-      <h3><i className="fa fa-cog" aria-hidden="true"></i>FEATURES</h3>
-      <Features>
-        {this.generateFeatures(this.props.features)}
-      </Features>
+        <h3>
+          <i className="fa fa-cog" aria-hidden="true"></i>
+          FEATURES
+        </h3>
+        <Features>
+          {this.generateFeatures(this.props.features)}
+        </Features>
       </Wrap>
     );
   }

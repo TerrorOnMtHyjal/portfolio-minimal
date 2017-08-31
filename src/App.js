@@ -5,6 +5,15 @@ import TopCard from './components/TopCard';
 import Projects from './components/Projects';
 import SocialCard from './components/SocialCard';
 
+/*
+#fc4445 red 
+#3feee6 bright teal 
+#55bcc9 muted teal 
+#97caef muted dark blue 
+#cafafe muted light blue
+#1a1a1d dark gray
+*/
+
 const Wrap = styled.div`
   width: 100%;
   overflow-x: hidden;
