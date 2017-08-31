@@ -36,6 +36,14 @@ const InnerWrap = styled.div`
       color: black;
     }
   }
+
+  @media screen and (min-width: 950px){
+    width: 70%;
+  }
+  
+  @media screen and (min-width: 1366px){
+    width: 50%;
+  }
 `;
 
 class SocialCard extends Component {
