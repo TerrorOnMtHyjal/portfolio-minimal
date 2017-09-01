@@ -44,8 +44,9 @@ const TopInfo = styled.div`
     & > h2 {
       font-family: 'Roboto Slab', serif;
       font-size: 3em;
+      line-height: 1em;
       font-weight: 700;
-      margin: 0;
+      margin: 0.15em 0;
       padding: 0;
     }
 
