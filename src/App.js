@@ -17,9 +17,7 @@ import SocialCard from './components/SocialCard';
 const defaultTheme = {
   primary: '#fc4445',
   accent: '#55bcc9',
-  highlight: 'white',
-  text: 'white',
-  highlightText: 'white'
+  primary2: '#299797'
 };
 
 const Wrap = styled.div`
@@ -29,7 +27,7 @@ const Wrap = styled.div`
   flex-flow: column;
   font-family: 'Raleway', sans-serif;
   font-size: 1rem;
-  background-color: #3feee6;
+  background-color: ${props => props.theme.primary2};
 
   @media screen and (min-width: 1024px){
     font-size: 1.25rem;

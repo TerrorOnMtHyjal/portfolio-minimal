@@ -9,7 +9,7 @@ const Wrap = styled.div`
   justify-content: center;
   width: 100%;
   height: 100vh;
-  background-color: #3feee6;
+  background-color: ${props => props.theme.primary2};
   font-size: 3em;
   color: white;
 `;
