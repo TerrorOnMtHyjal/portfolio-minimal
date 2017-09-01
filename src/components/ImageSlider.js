@@ -4,19 +4,17 @@ import Slider from 'react-slick';
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import "../styles/slickChanges.css";
 
 const SliderW = styled.div`
   width: 100%;
-  height: auto;
-  padding: 2em 0;
   background-color: black;
+  padding: 2em 0;
   background-image: url("https://www.transparenttextures.com/patterns/shattered.png");
   margin-bottom: 3em;
 
   @media screen and (min-width: 1024px){
     & > div {
-        display: flex;
-        align-items: center;
         margin: 0 auto;
         width: 80%;
     }
@@ -43,11 +41,15 @@ const sliderSettings = {
   slidesToShow: 2,
   slidesToScroll: 1,
   infinite: false,
-  arrows: false,
+  arrows: true,
+  draggable: false,
+
   responsive: [ 
     { breakpoint: 1024, 
       settings: { 
-        slidesToShow: 1
+        slidesToShow: 1,
+        draggable: false,
+        arrows: false,
       } 
     }
   ]
