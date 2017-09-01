@@ -80,8 +80,7 @@ class SocialCard extends Component {
     return (
       <Wrap>
         <Waypoint 
-          scrollableAncestor={ window } 
-          bottomOffset="10%" 
+          bottomOffset="5%" 
           onEnter={ this.state.stackInView ? undefined : () => this.handleEnter() }
         >
           <InnerWrap>

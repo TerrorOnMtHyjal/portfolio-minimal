@@ -11,7 +11,6 @@ const Wrap = styled.div`
   flex-flow: column;
   align-items: center;
   width: 100%;
-  height: 500vh;
   background-color: white;
   padding: 10vh 0;
   -webkit-backface-visibility: hidden;
