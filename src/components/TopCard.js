@@ -103,7 +103,7 @@ class TopCard extends Component {
           <TopInfo>
             <h1>JARED MOHNEY</h1>
             <h3>Full Stack Javascript Developer</h3>
-            <p>Longmont, CO</p>
+            <p>Boulder, CO</p>
           </TopInfo>
           {/*<ProjectStack stack={['React', 'Redux', 'MongoDB', 'PostgreSQL', 'Node', 'Express']}/>*/}
           {/*<SkillsList>
