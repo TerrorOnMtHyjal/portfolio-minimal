@@ -50,6 +50,7 @@ class ProjectStack extends Component {
   }
   
   handleEnter(){
+    console.log("once")
     this.setState({
       stackInView : true
     });
@@ -70,7 +71,11 @@ class ProjectStack extends Component {
 
   render() {
     return (
-      <Waypoint scrollableAncestor={ window } bottomOffset="20%" onEnter={ () => this.handleEnter() }>
+      <Waypoint 
+        scrollableAncestor={ window } 
+        bottomOffset="20%" 
+        onEnter={ this.state.stackInView ? undefined : () => this.handleEnter() }
+      >
         <SkillsList>
           {this.generateStack(this.props.stack)}
         </SkillsList>
