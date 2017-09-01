@@ -7,12 +7,16 @@ import "slick-carousel/slick/slick-theme.css";
 
 const SliderW = styled.div`
   width: 100%;
+  height: auto;
+  padding: 2em 0;
   background-color: black;
   background-image: url("https://www.transparenttextures.com/patterns/shattered.png");
   margin-bottom: 3em;
 
   @media screen and (min-width: 1024px){
     & > div {
+        display: flex;
+        align-items: center;
         margin: 0 auto;
         width: 80%;
     }
