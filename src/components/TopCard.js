@@ -22,9 +22,9 @@ const InnerWrap = styled.div`
   align-items: flex-end;
   width: 95%;
 
-  @media screen and (min-width: 1024px){
-    width: 80%;
-  }
+  // @media screen and (min-width: 1024px){
+  //   width: 80%;
+  // }
 `;
 
 const TopInfo = styled.div`
@@ -57,43 +57,31 @@ const TopInfo = styled.div`
     padding: 0;
   }
 
-  @media screen and (min-width: 1024px){
+  @media screen and (min-width: 768px){
     & > h1 {
-      font-size: 3em;
+      font-size: 5em;
     }
 
     & > h3 {
-      font-size: 1.5em;
+      font-size: 2.5em;
     }
 
     & > p {
-      font-size: 1em;
+      font-size: 2em;
     }
   }
 `;
 
-const SkillsList = styled.ul`
-  display: flex;
-  flex-flow: column;
-  padding: 0;
-  margin: 0;
-  justify-content: center;
-  align-items: flex-end;
-  width: 100%;
-  list-style-type: none;
-  color: white;
-  margin-top: 5vh;
-`;
+// const Links = styled.div`
+//   display: flex;
 
-const Skill = styled.li`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1em;
-  padding: 0.25em 0.5em;
-  margin: 0;
-  background-color: #1a1a1d;
-`;
+//   & > a {
+//     color: inherit;
+//     text-decoration: none;
+//     font-size: 2.5em;
+//     padding-left: 0.5em;
+//   }
+// `;
 
 class TopCard extends Component {
   render() {
@@ -105,15 +93,15 @@ class TopCard extends Component {
             <h3>Full Stack Javascript Developer</h3>
             <p>Boulder, CO</p>
           </TopInfo>
-          {/*<ProjectStack stack={['React', 'Redux', 'MongoDB', 'PostgreSQL', 'Node', 'Express']}/>*/}
-          {/*<SkillsList>
-            <Skill>React</Skill>
-            <Skill>Redux</Skill>
-            <Skill>MongoDB</Skill>
-            <Skill>PostgreSQL</Skill>
-            <Skill>Node</Skill>
-            <Skill>Express</Skill>
-          </SkillsList>*/}
+          {/*<Links>
+            <a href="http://www.github.com/dustwise" target="_blank" rel="noopener noreferrer">
+              <i className="fa fa-github" aria-hidden="true"/>
+            </a>
+
+            <a href="http://www.linkedin.com/in/jaredmohney" target="_blank" rel="noopener noreferrer">
+              <i className="fa fa-linkedin" aria-hidden="true"/>
+            </a>
+          </Links>*/}
         </InnerWrap>
       </Wrap>
     );
