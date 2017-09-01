@@ -14,6 +14,10 @@ const SkillsList = styled.ul`
 `;
 
 const Skill = styled.li`
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0) scale(1.0, 1.0);
+  position: relative;
+  top: -1em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,9 +26,10 @@ const Skill = styled.li`
   margin-bottom: 0.5em;
   margin-right: 1em;
   background-color: #1a1a1d;
-  transition: all 0.5s ease-in-out;
+  transition: all 0.4s ease-out;
   transition-delay: ${props => props.delay};
   opacity: ${props => props.inView ? 1 : 0};
+  transform: ${props => props.inView && 'translateY(1em)'};
 `;
 
 const FillerSkill = styled.li`
@@ -45,7 +50,6 @@ class ProjectStack extends Component {
   }
   
   handleEnter(){
-    console.log("entered");
     this.setState({
       stackInView : true
     });
@@ -65,7 +69,6 @@ class ProjectStack extends Component {
   }
 
   render() {
-    console.log(this.state.stackInView)
     return (
       <Waypoint scrollableAncestor={ window } bottomOffset="20%" onEnter={ () => this.handleEnter() }>
         <SkillsList>
