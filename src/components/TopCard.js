@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
+import ProjectStack from './ProjectStack';
+
 const Wrap = styled.div`
   display: flex;
   flex-flow: column;
@@ -17,6 +19,7 @@ const InnerWrap = styled.div`
   display: flex;
   flex-flow: column;
   justify-content: center;
+  align-items: flex-end;
   width: 95%;
 
   @media screen and (min-width: 1024px){
@@ -102,14 +105,15 @@ class TopCard extends Component {
             <h3>Full Stack Javascript Developer</h3>
             <p>Longmont, CO</p>
           </TopInfo>
-          <SkillsList>
+          {/*<ProjectStack stack={['React', 'Redux', 'MongoDB', 'PostgreSQL', 'Node', 'Express']}/>*/}
+          {/*<SkillsList>
             <Skill>React</Skill>
             <Skill>Redux</Skill>
             <Skill>MongoDB</Skill>
             <Skill>PostgreSQL</Skill>
             <Skill>Node</Skill>
             <Skill>Express</Skill>
-          </SkillsList>
+          </SkillsList>*/}
         </InnerWrap>
       </Wrap>
     );

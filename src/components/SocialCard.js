@@ -48,6 +48,14 @@ const SocialLink = styled.a`
   }
 `;
 
+const Carlton = styled.img`
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: scale(0.1);
+  transform-origin: 100% 100%;
+`;
+
 class SocialCard extends Component {
 
   constructor(props, context) {
@@ -108,6 +116,7 @@ class SocialCard extends Component {
 
           </InnerWrap>
         </Waypoint>
+        <Carlton src={require('../images/carlton.gif')} />
       </Wrap>
     );
   }
