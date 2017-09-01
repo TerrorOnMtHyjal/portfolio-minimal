@@ -71,7 +71,7 @@ class ProjectStack extends Component {
   render() {
     return (
       <Waypoint 
-        bottomOffset="20%" 
+        bottomOffset="10%" 
         onEnter={ this.state.stackInView ? undefined : () => this.handleEnter() }
       >
         <SkillsList>

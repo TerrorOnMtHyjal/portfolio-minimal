@@ -21,6 +21,8 @@ const Wrap = styled.div`
 `;
 
 const Button = styled.a`
+  z-index: 1;
+  position: relative;
   color: white;
   text-decoration: none;
   text-align: center;
@@ -31,7 +33,35 @@ const Button = styled.a`
   border: 2px solid ${props => props.theme.accent};
   font-family: 'Roboto Slab', serif;
   font-weight: 700;
+  background-color: transparent;
   color: ${props => props.theme.accent};
+  transition: all 0.15s ease-in-out;
+  transform-style: preserve-3d;
+
+  & > span {
+    position: relative;
+    z-index: 3;
+  }
+
+  &::after {
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: 0;
+    height: 100%;
+    background-color: ${props => props.theme.accent};
+    transition: all 0.25s ease-out;
+  }
+
+  &:hover {
+    color: white;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
 
   @media screen and (min-width: 736px){
     margin: 0 2em 0 0;
@@ -43,10 +73,10 @@ class ProjectLinks extends Component {
     return (
       <Wrap>
         <Button href={this.props.links.github} target="_blank" rel="noopener noreferrer">
-          GITHUB
+          <span>GITHUB</span>
         </Button>
         <Button href={this.props.links.live} target="_blank" rel="noopener noreferrer">
-          LIVE
+          <span>LIVE</span>
         </Button>
       </Wrap>
     );
