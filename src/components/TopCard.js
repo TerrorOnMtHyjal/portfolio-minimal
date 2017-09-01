@@ -21,10 +21,6 @@ const InnerWrap = styled.div`
   justify-content: center;
   align-items: flex-end;
   width: 95%;
-
-  // @media screen and (min-width: 1024px){
-  //   width: 80%;
-  // }
 `;
 
 const TopInfo = styled.div`
@@ -72,17 +68,6 @@ const TopInfo = styled.div`
   }
 `;
 
-// const Links = styled.div`
-//   display: flex;
-
-//   & > a {
-//     color: inherit;
-//     text-decoration: none;
-//     font-size: 2.5em;
-//     padding-left: 0.5em;
-//   }
-// `;
-
 class TopCard extends Component {
   render() {
     return (
@@ -93,15 +78,6 @@ class TopCard extends Component {
             <h3>Full Stack Javascript Developer</h3>
             <p>Boulder, CO</p>
           </TopInfo>
-          {/*<Links>
-            <a href="http://www.github.com/dustwise" target="_blank" rel="noopener noreferrer">
-              <i className="fa fa-github" aria-hidden="true"/>
-            </a>
-
-            <a href="http://www.linkedin.com/in/jaredmohney" target="_blank" rel="noopener noreferrer">
-              <i className="fa fa-linkedin" aria-hidden="true"/>
-            </a>
-          </Links>*/}
         </InnerWrap>
       </Wrap>
     );
