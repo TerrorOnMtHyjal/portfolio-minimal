@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
+var Waypoint = require('react-waypoint');
+
 const SkillsList = styled.ul`
   display: flex;
   padding: 0;
@@ -20,6 +22,9 @@ const Skill = styled.li`
   margin-bottom: 0.5em;
   margin-right: 1em;
   background-color: #1a1a1d;
+  transition: all 0.5s ease-in-out;
+  transition-delay: ${props => props.delay};
+  opacity: ${props => props.inView ? 1 : 0};
 `;
 
 const FillerSkill = styled.li`
@@ -29,9 +34,29 @@ const FillerSkill = styled.li`
 
 class ProjectStack extends Component {
 
+  constructor(props, context) {
+    super(props, context);
+    
+    this.state = {
+      stackInView : false
+    };
+
+    this.handleEnter = this.handleEnter.bind(this);
+  }
+  
+  handleEnter(){
+    console.log("entered");
+    this.setState({
+      stackInView : true
+    });
+  }
+
   generateStack(stack){
+    let delay = 0;
+
     const stackArr = stack.map((skill, index) => {
-      return <Skill key={skill + index}>{skill}</Skill>
+      delay += 0.2;
+      return <Skill key={skill + index} delay={ delay + 's' } inView={ this.state.stackInView }>{skill}</Skill>
     });
 
     stackArr.push(<FillerSkill key="fill1"/>, <FillerSkill key="fill2"/>, <FillerSkill key="fill3"/>, <FillerSkill key="fill4"/>);
@@ -40,10 +65,13 @@ class ProjectStack extends Component {
   }
 
   render() {
+    console.log(this.state.stackInView)
     return (
-      <SkillsList>
-        {this.generateStack(this.props.stack)}
-      </SkillsList>
+      <Waypoint scrollableAncestor={ window } bottomOffset="20%" onEnter={ () => this.handleEnter() }>
+        <SkillsList>
+          {this.generateStack(this.props.stack)}
+        </SkillsList>
+      </Waypoint>
     );
   }
 }

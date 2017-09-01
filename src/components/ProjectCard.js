@@ -59,6 +59,7 @@ const TopInfo = styled.div`
 `;
 
 class ProjectCard extends Component {
+
   render() {
     const { backgroundColor, title, tagline, images, stack, links, features } = this.props.data;
 
@@ -71,7 +72,8 @@ class ProjectCard extends Component {
               <h3>{ tagline }</h3>
             </div>
           </TopInfo>
-          <ProjectStack stack={ stack } />
+
+          <ProjectStack stack={ stack }/>
         </InnerWrap>
 
         <ImageSlider images={ images } />
