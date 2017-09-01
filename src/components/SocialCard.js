@@ -14,6 +14,8 @@ const Wrap = styled.div`
   background-color: ${props => props.theme.primary2};
   font-size: 3em;
   color: white;
+  transform-origin: 0 0;
+  transform: translateZ(0) scale(1);
 `;
 
 const InnerWrap = styled.div`

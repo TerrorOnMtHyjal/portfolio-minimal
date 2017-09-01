@@ -34,14 +34,25 @@ const Wrap = styled.div`
   }
 `;
 
+const ParaControl = styled.div`
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  perspective: 2px;
+  perspective-origin: 0 0;
+`;
+
 class App extends Component {
   render() {
     return (
       <ThemeProvider theme={defaultTheme}>
         <Wrap>
-          <TopCard/>
-          <Projects/>
-          <SocialCard/>
+          <ParaControl>
+            <TopCard/>
+            <Projects/>
+            <SocialCard/>
+          </ParaControl>
         </Wrap>
       </ThemeProvider>
     );

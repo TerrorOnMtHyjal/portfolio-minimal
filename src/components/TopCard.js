@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import ProjectStack from './ProjectStack';
 
 const Wrap = styled.div`
+  position: relative;
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -13,6 +14,8 @@ const Wrap = styled.div`
   color: #1a1a1d;
   background-color: ${props => props.theme.primary};
   font-size: 1em;
+  transform-origin: 0 0;
+  transform: translateZ(-2px) scale(2);
 `;
 
 const InnerWrap = styled.div`

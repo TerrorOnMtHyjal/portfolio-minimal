@@ -11,10 +11,13 @@ const Wrap = styled.div`
   flex-flow: column;
   align-items: center;
   width: 100%;
+  height: 500vh;
   background-color: white;
   padding: 10vh 0;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  transform-origin: 0 0;
+  transform: translateZ(0) scale(1);
 
   clip-path: polygon(
     0 0,
