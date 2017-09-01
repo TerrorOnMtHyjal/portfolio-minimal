@@ -29,6 +29,7 @@ const Wrap = styled.div`
   flex-flow: column;
   font-family: 'Raleway', sans-serif;
   font-size: 1rem;
+  background-color: #3feee6;
 
   @media screen and (min-width: 1024px){
     font-size: 1.25rem;

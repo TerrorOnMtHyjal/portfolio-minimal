@@ -7,11 +7,21 @@ import { projectsData } from '../lib/projectsData';
 const Wrap = styled.div`
   position: relative;
   display: flex;
+  top: -6vw;
   flex-flow: column;
   align-items: center;
   width: 100%;
   background-color: white;
-  padding-top: 10vh;
+  padding: 10vh 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  clip-path: polygon(
+    0 0,
+    100% 6vw,
+    100% calc(100% - 6vw),
+    0 100%
+  );
 `;
 
 class Projects extends Component {

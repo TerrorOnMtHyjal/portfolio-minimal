@@ -12,13 +12,6 @@ const Wrap = styled.div`
   background-color: #3feee6;
   font-size: 3em;
   color: white;
-
-  clip-path: polygon(
-    0 0,
-    100% 6vw,
-    100% 100%,
-    0 100%
-  );
 `;
 
 const InnerWrap = styled.div`
