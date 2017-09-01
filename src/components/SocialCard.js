@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
+var Waypoint = require('react-waypoint');
+
 const Wrap = styled.div`
   position: relative;
   display: flex;
@@ -20,16 +22,6 @@ const InnerWrap = styled.div`
   align-items: center;
   width: 90%;
 
-  & > a {
-    transition: all 0.25s ease-in-out;
-    text-decoration: none;
-    color: inherit;
-
-    &:hover {
-      color: black;
-    }
-  }
-
   @media screen and (min-width: 950px){
     width: 70%;
   }
@@ -39,25 +31,83 @@ const InnerWrap = styled.div`
   }
 `;
 
+const SocialLink = styled.a`
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0) scale(1.0, 1.0);
+  position: relative;
+  top: 1em;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.4s ease-out;
+  transition-delay: ${props => props.delay};
+  opacity: ${props => props.inView ? 1 : 0};
+  transform: ${props => props.inView && 'translateY(-1em)'};
+
+  &:hover {
+    color: black;
+  }
+`;
+
 class SocialCard extends Component {
+
+  constructor(props, context) {
+    super(props, context);
+    
+    this.state = {
+      stackInView : false
+    };
+
+    this.handleEnter = this.handleEnter.bind(this);
+  }
+  
+  handleEnter(){
+    this.setState({
+      stackInView : true
+    });
+  }
+
   render() {
     return (
       <Wrap>
-        <InnerWrap>
+        <Waypoint 
+          scrollableAncestor={ window } 
+          bottomOffset="10%" 
+          onEnter={ this.state.stackInView ? undefined : () => this.handleEnter() }
+        >
+          <InnerWrap>
 
-          <a href="http://www.github.com/dustwise" target="_blank" rel="noopener noreferrer">
-            <i className="fa fa-github" aria-hidden="true"/>
-          </a>
+            <SocialLink 
+              href="http://www.github.com/dustwise" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              delay="0.2s"
+              inView={ this.state.stackInView }
+            >
+              <i className="fa fa-github" aria-hidden="true"/>
+            </SocialLink>
 
-          <a href="http://www.linkedin.com/in/jaredmohney" target="_blank" rel="noopener noreferrer">
-            <i className="fa fa-linkedin" aria-hidden="true"/>
-          </a>
+            <SocialLink 
+              href="http://www.linkedin.com/in/jaredmohney" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              delay="0.4s"
+              inView={ this.state.stackInView }
+            >
+              <i className="fa fa-linkedin" aria-hidden="true"/>
+            </SocialLink>
 
-          <a href="mailto:jared.mohney@gmail.com?Subject=Hello%20Jared" target="_blank" rel="noopener noreferrer">
-            <i className="fa fa-envelope" aria-hidden="true"/>
-          </a>
+            <SocialLink 
+              href="mailto:jared.mohney@gmail.com?Subject=Hello%20Jared" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              delay="0.6s"
+              inView={ this.state.stackInView }
+            >
+              <i className="fa fa-envelope" aria-hidden="true"/>
+            </SocialLink>
 
-        </InnerWrap>
+          </InnerWrap>
+        </Waypoint>
       </Wrap>
     );
   }
