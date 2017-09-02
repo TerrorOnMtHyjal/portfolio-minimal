@@ -16,6 +16,7 @@ const Wrap = styled.div`
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   transform-origin: 0 0;
+  z-index: 3;
   transform: translateZ(0) scale(1);
 
   clip-path: polygon(

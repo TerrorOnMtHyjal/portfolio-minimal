@@ -20,54 +20,6 @@ const Wrap = styled.div`
   }
 `;
 
-const Button = styled.a`
-  z-index: 1;
-  position: relative;
-  color: white;
-  text-decoration: none;
-  text-align: center;
-  flex-basis: 0;
-  flex-grow: 1;
-  padding: 1em 2em;
-  margin: 1em;
-  border: 2px solid ${props => props.theme.accent};
-  font-family: 'Roboto Slab', serif;
-  font-weight: 700;
-  background-color: transparent;
-  color: ${props => props.theme.accent};
-  transition: all 0.15s ease-in-out;
-  transform-style: preserve-3d;
-
-  & > span {
-    position: relative;
-    z-index: 3;
-  }
-
-  &::after {
-    z-index: 1;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    content: '';
-    width: 0;
-    height: 100%;
-    background-color: ${props => props.theme.accent};
-    transition: all 0.25s ease-out;
-  }
-
-  &:hover {
-    color: white;
-  }
-
-  &:hover::after {
-    width: 100%;
-  }
-
-  @media screen and (min-width: 736px){
-    margin: 0 2em 0 0;
-  }
-`;
-
 const Button3D = styled.div`
   perspective: 7500px;
   transform-style: preserve-3d;
@@ -89,6 +41,7 @@ const ButtonFace = styled.div`
   background-color: ${props => props.theme.accent};
   font-family: 'Roboto Slab', serif;
   height: 70px;
+  font-size: 1em;
   border: 2px solid ${props => props.theme.accent};
   color: ${props => props.theme.accent};
 

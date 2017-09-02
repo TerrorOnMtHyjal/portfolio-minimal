@@ -16,6 +16,7 @@ const Wrap = styled.div`
   font-size: 1em;
   transform-origin: 0 0;
   transform: translateZ(-2px) scale(2);
+  z-index: 1;
 `;
 
 const InnerWrap = styled.div`
@@ -24,6 +25,7 @@ const InnerWrap = styled.div`
   justify-content: center;
   align-items: flex-end;
   width: 95%;
+  z-index: 2;
 `;
 
 const TopInfo = styled.div`
@@ -58,7 +60,7 @@ const TopInfo = styled.div`
 
   @media screen and (min-width: 768px){
     & > h1 {
-      font-size: 5em;
+      font-size: 4.5em;
     }
 
     & > h3 {
