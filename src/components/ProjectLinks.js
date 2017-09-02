@@ -5,7 +5,6 @@ const Wrap = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-around;
-  perspective: 2000px;
 
   @media screen and (min-width: 600px){
     width: 80%;
@@ -70,6 +69,7 @@ const Button = styled.a`
 `;
 
 const Button3D = styled.div`
+  perspective: 7500px;
   transform-style: preserve-3d;
   transition: all 0.25s ease-out;
   flex-basis: 0;
