@@ -35,6 +35,7 @@ const Button = styled.div`
   color: ${props => props.theme.accent};
   border: 2px solid ${props => props.theme.accent};
   transition: all 0.25s ease-out;
+  cursor: pointer;
 
   & > span {
     transition: all 0.25s ease-out;
