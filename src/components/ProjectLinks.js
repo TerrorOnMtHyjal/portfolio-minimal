@@ -4,7 +4,6 @@ import styled from 'styled-components';
 const Wrap = styled.div`
   width: 100%;
   display: flex;
-  justify-content: space-around;
 
   @media screen and (min-width: 600px){
     width: 80%;
@@ -20,70 +19,65 @@ const Wrap = styled.div`
   }
 `;
 
-const Button3D = styled.div`
-  perspective: 7500px;
-  transform-style: preserve-3d;
-  transition: all 0.25s ease-out;
+const Button = styled.div`
   flex-basis: 0;
   flex-grow: 1;
-  margin-right: 2em;
-  height: 70px;
 
-  &:hover {
-    transform: rotateX(-89deg);
-  }
-`;
-
-const ButtonFace = styled.div`
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: ${props => props.theme.accent};
+
+  margin: 1em;
+  padding: 1em 0;
+
   font-family: 'Roboto Slab', serif;
-  height: 70px;
-  font-size: 1em;
-  border: 2px solid ${props => props.theme.accent};
   color: ${props => props.theme.accent};
+  border: 2px solid ${props => props.theme.accent};
+  transition: all 0.25s ease-out;
 
-  ${props => props.default && `
-    transform: translateZ(35px);
-    background-color: transparent;
-  `}
+  & > span {
+    transition: all 0.25s ease-out;
+  }
 
-  ${props => props.active && `
-    transform: rotateX(90deg) translateZ(105px);
+  &::after {
+    position: absolute;
+    content: '';
     background-color: ${props => props.theme.accent};
-    color: white;
-  `}
+    left: 0;
+    bottom: -0.1em;
+    height: 0.2em;
+    width: 0%;
+    transition: all 0.25s ease-out;
+  }
+
+  &:hover {
+    border: 2px solid transparent;
+    color: ${props => props.theme.primary};
+
+    & > span {
+      transform: translateY(-0.25em);
+    }
+
+    &::after {
+      width: 100%;
+      background-color: ${props => props.theme.primary};
+    }
+  }   
 `;
+
+
 
 class ProjectLinks extends Component {
   render() {
     return (
       <Wrap>
-        {/*<Button href={this.props.links.github} target="_blank" rel="noopener noreferrer">
+        <Button>
           <span>GITHUB</span>
         </Button>
-        <Button href={this.props.links.live} target="_blank" rel="noopener noreferrer">
+        <Button>
           <span>LIVE</span>
-        </Button>*/}
-        <Button3D>
-          <ButtonFace default>
-            <span>GITHUB</span>
-          </ButtonFace>
-          <ButtonFace active>
-            <span>GITHUB</span>
-          </ButtonFace>
-        </Button3D>
-
-        <Button3D>
-          <ButtonFace default>
-            <span>LIVE</span>
-          </ButtonFace>
-          <ButtonFace active>
-            <span>LIVE</span>
-          </ButtonFace>
-        </Button3D>
+        </Button>
       </Wrap>
     );
   }
