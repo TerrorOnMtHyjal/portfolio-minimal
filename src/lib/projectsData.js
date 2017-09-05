@@ -1,5 +1,4 @@
 export const projectsData = [
-
   {
     title: 'ProtoPage',
     tagline: 'Find Google Fonts pairings quickly with our prototype startup page',
@@ -28,6 +27,7 @@ export const projectsData = [
       live: 'http://protopage.dustwise.com'
     }
   },
+
 
   {
     title: 'PogTracker',
@@ -61,10 +61,6 @@ export const projectsData = [
   },
 
 
-
-
-
-
   {
     title: 'Rocket Garage',
     tagline: 'Redefining digital item trading for the Rocket League community',
@@ -93,6 +89,7 @@ export const projectsData = [
     links : {
       github : 'http://www.github.com/dustwise/Rocket-Garage',
       live: 'http://www.rocketgarage.io'
-    }
+    },
+    refactoring: true
   }
 ]

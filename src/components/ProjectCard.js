@@ -65,17 +65,38 @@ const TopInfo = styled.div`
   }
 `;
 
+const TitleW = styled.div`
+  display: flex;
+  align-items: center;
+
+  & > h2 {
+    margin: 0.15em 0;
+    padding: 0;
+
+    font-family: 'Roboto Slab', serif;
+    font-size: 3em;
+    line-height: 1em;
+    font-weight: 700;
+  }
+`;
+
+const RefactorTag = styled.span`
+  background-color: yellow;
+  padding: 0.25em 0.5em;
+`;
+
 class ProjectCard extends Component {
 
   render() {
-    const { backgroundColor, title, tagline, images, stack, links, features } = this.props.data;
-
+    const { backgroundColor, title, tagline, images, stack, links, features, refactoring } = this.props.data;
+    console.log(refactoring)
     return (
       <Wrap>
 
         <InnerWrap bordered>
           <TopInfo>
             <div>
+              {refactoring && <RefactorTag>Refactoring</RefactorTag>}
               <h2>{ title }</h2>
               <h3>{ tagline }</h3>
             </div>
