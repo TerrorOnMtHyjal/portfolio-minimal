@@ -5,36 +5,44 @@ var Waypoint = require('react-waypoint');
 
 const SkillsList = styled.ul`
   display: flex;
+  flex-wrap: wrap;
+
+  width: 100%;
   padding: 0;
   margin: 0;
-  flex-wrap: wrap;
-  width: 100%;
+
   list-style-type: none;
+
   color: white;
 `;
 
 const Skill = styled.li`
-  -webkit-backface-visibility: hidden;
-  -webkit-transform: translateZ(0) scale(1.0, 1.0);
   position: relative;
-  top: -1em;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1em;
+
+  top: -1em;
   padding: 0.25em 0.5em;
   margin-bottom: 0.5em;
   margin-right: 1em;
+
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0) scale(1.0, 1.0);
+
+  font-size: 1em;
   background-color: #1a1a1d;
+
   transition: all 0.4s ease-out;
   transition-delay: ${props => props.delay};
+
   opacity: ${props => props.inView ? 1 : 0};
   transform: ${props => props.inView && 'translateY(1em)'};
 `;
 
 const FillerSkill = styled.li`
-  height: 0;
   width: 20%;
+  height: 0;
 `;
 
 class ProjectStack extends Component {

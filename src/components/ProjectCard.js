@@ -11,6 +11,7 @@ const Wrap = styled.div`
   display: flex;
   flex-flow: column;
   align-items: center;
+
   width: 100%;
   padding-top: 2em;
   padding-bottom: 10vh;
@@ -21,15 +22,18 @@ const InnerWrap = styled.div`
   display: flex;
   flex-flow: column;
   align-items: center;
-  width: 95%;
-  border-left: ${props => props.bordered && '0.2em solid ' + props.theme.primary};
-  padding-left: ${props => props.bordered && "1em"};
-  margin-bottom: ${props => props.bordered && "4em"};
 
+  width: 95%;
+
+  ${props => props.bordered && `
+    padding-left: 1em;
+    margin-bottom: 4em;
+    border-left: 0.2em solid ${props.theme.primary};
+  `}
+  
   @media screen and (min-width: 1024px){
     width: 80%;
   }
-
 `;
 
 const TopInfo = styled.div`
@@ -42,19 +46,21 @@ const TopInfo = styled.div`
     align-items: flex-start;
 
     & > h2 {
+      margin: 0.15em 0;
+      padding: 0;
+
       font-family: 'Roboto Slab', serif;
       font-size: 3em;
       line-height: 1em;
       font-weight: 700;
-      margin: 0.15em 0;
-      padding: 0;
     }
 
     & > h3 {
-      font-size: 1.5em;
-      font-weight: 400;
       margin: 0;
       padding: 0;
+
+      font-size: 1.5em;
+      font-weight: 400;
     }
   }
 `;
@@ -65,7 +71,8 @@ class ProjectCard extends Component {
     const { backgroundColor, title, tagline, images, stack, links, features } = this.props.data;
 
     return (
-      <Wrap color={backgroundColor}>
+      <Wrap>
+
         <InnerWrap bordered>
           <TopInfo>
             <div>
@@ -73,7 +80,6 @@ class ProjectCard extends Component {
               <h3>{ tagline }</h3>
             </div>
           </TopInfo>
-
           <ProjectStack stack={ stack }/>
         </InnerWrap>
 
@@ -83,6 +89,7 @@ class ProjectCard extends Component {
           <ProjectFeatures features={ features }/>
           <ProjectLinks links={ links } />
         </InnerWrap>
+
       </Wrap>
     );
   }

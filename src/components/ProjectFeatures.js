@@ -12,6 +12,7 @@ const Wrap = styled.div`
 
     & > i {
       margin-right: 0.5em;
+
       color: ${props => props.theme.primary};
     }
   }
@@ -21,13 +22,15 @@ const Features = styled.ul`
   display: flex;
   flex-flow: column;
   align-items: center;
+  width: 100%;
   padding: 0;
   margin: 0;
-  width: 100%;
+  margin-bottom: 2em;
+
   color: black;
   font-weight: 300;
-  margin-bottom: 2em;
   font-size: 0.9em;
+
   list-style-position: inside;
 
   & > li {
@@ -48,7 +51,7 @@ class ProjectFeatures extends Component {
 
   generateFeatures(features){
     return features.map((feature, index) => {
-      return <li key={index}>{feature}</li>
+      return <li key={ index }>{ feature }</li>
     });
   }
 

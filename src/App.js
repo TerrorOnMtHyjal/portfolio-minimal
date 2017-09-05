@@ -21,12 +21,15 @@ const defaultTheme = {
 };
 
 const Wrap = styled.div`
-  width: 100%;
-  overflow-x: hidden;
   display: flex;
   flex-flow: column;
+  width: 100%;
+
+  overflow-x: hidden;
+
   font-family: 'Raleway', sans-serif;
   font-size: 1rem;
+
   background-color: ${props => props.theme.primary2};
 
   @media screen and (min-width: 1024px){
@@ -37,8 +40,10 @@ const Wrap = styled.div`
 const ParaControl = styled.div`
   width: 100%;
   height: 100vh;
+
   overflow-x: hidden;
   overflow-y: scroll;
+  
   perspective: 2px;
   perspective-origin: 0 0;
 `;

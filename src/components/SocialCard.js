@@ -11,9 +11,11 @@ const Wrap = styled.div`
   justify-content: center;
   width: 100%;
   height: 100vh;
+
   background-color: ${props => props.theme.primary2};
-  font-size: 3em;
   color: white;
+  font-size: 3em;
+
   transform-origin: 0 0;
   transform: translateZ(0) scale(1);
 `;
@@ -34,16 +36,17 @@ const InnerWrap = styled.div`
 `;
 
 const SocialLink = styled.a`
-  -webkit-backface-visibility: hidden;
-  -webkit-transform: translateZ(0) scale(1.0, 1.0);
   position: relative;
   top: 1em;
+
   text-decoration: none;
   color: inherit;
+
   transition: all 0.4s ease-out;
   transition-delay: ${props => props.delay};
   opacity: ${props => props.inView ? 1 : 0};
   transform: ${props => props.inView && 'translateY(-1em)'};
+
 
   &:hover {
     color: black;
@@ -54,6 +57,7 @@ const Carlton = styled.img`
   position: absolute;
   bottom: 0;
   right: 0;
+
   transform: scale(0.1);
   transform-origin: 100% 100%;
 `;
@@ -117,6 +121,7 @@ class SocialCard extends Component {
 
           </InnerWrap>
         </Waypoint>
+
         <Carlton src={require('../images/carlton.gif')} />
       </Wrap>
     );

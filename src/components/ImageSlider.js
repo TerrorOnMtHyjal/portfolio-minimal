@@ -8,15 +8,16 @@ import "../styles/slickChanges.css";
 
 const SliderW = styled.div`
   width: 100%;
-  background-color: black;
-  padding: 2em 0;
-  background-image: url("https://www.transparenttextures.com/patterns/shattered.png");
   margin-bottom: 3em;
+  padding: 2em 0;
+
+  background-color: black;
+  background-image: url("https://www.transparenttextures.com/patterns/shattered.png");
 
   @media screen and (min-width: 1024px){
     & > div {
-        margin: 0 auto;
-        width: 80%;
+      width: 80%;
+      margin: 0 auto;
     }
   }
 `;
@@ -45,7 +46,8 @@ const sliderSettings = {
   draggable: false,
 
   responsive: [ 
-    { breakpoint: 1024, 
+    { 
+      breakpoint: 1024, 
       settings: { 
         slidesToShow: 1,
         draggable: false,
