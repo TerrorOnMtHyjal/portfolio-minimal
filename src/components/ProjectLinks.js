@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const Wrap = styled.div`
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 
   @media screen and (min-width: 600px){
     width: 80%;

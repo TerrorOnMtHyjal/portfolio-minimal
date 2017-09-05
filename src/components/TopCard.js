@@ -43,7 +43,7 @@ const TopInfo = styled.div`
   }
 
   & > h3 {
-    font-size: 1.25em;
+    font-size: 1.2em;
     margin: 0;
     padding: 0;
     margin-top: -0.3em;
