@@ -69,8 +69,10 @@ export const projectsData = [
     title: 'Rocket Garage',
     tagline: 'Redefining digital item trading for the Rocket League community',
     images: [
-      require('../images/rocket-garage-cropped-2.png'),
-      require('../images/rocket-garage-cropped-2.png')
+      require('../images/rg-current.png'),
+      require('../images/rg-old.png'),
+      require('../images/rg-old-1.png'),
+      require('../images/rg-old-3.png')
     ],
     stack: [
       'Twitch API',
