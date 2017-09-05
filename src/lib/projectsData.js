@@ -55,7 +55,7 @@ export const projectsData = [
     ],
     backgroundColor : '#18E6DE',
     links : {
-      github : 'http://www.github.com/dustwise/pogtracker',
+      github : 'http://www.github.com/dustwise/proto-page',
       live: 'http://protopage.dustwise.com'
     }
   },
