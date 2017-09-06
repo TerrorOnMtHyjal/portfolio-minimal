@@ -71,19 +71,20 @@ export const projectsData = [
       require('../images/rg-old-3.png')
     ],
     stack: [
-      'Twitch API',
+      'React',
+      'Redux',
+      'React Router 4',
+      'Node.js',
       'Express',
-      'Node',
-      'MongoDB',
-      'Dokku'
+      'Passport.js',
+      'PostgreSQL',
+      'Knex'
     ],
     features: [
-      'Utilizes multiple Twitch APIs to gather channel and replay chat data of a provided broadcast replay.',
-      'Scans JSON for emote usage and generates timestamps for bursts of individual emotes.',
-      'Frontend converts timestamps to buttons, integrated with twitch embedded player.',
-      'The more active the chat, the better the results. Can easily handle a chat with tens of thousands of users.',
-      'Provides all default emotes for each replay as well as subscriber emotes for partnered channels.',
-      'Saves relevant generated data for instant delivery to future users with MongoDB.'
+      'Provides users with a mobile-responsive trading experience, previously unavailable in the field.',
+      'Users are able to utilize a front page live-trading feature to emulate popular social trading platforms, such as Discord.',
+      'Steam and Auth0 authentication, backed by PostgreSQL/Knex.',
+      'Features inventory and deals sections per profile to help facilitate faster, more accurate trades.',
     ],
     backgroundColor : '#00D6CE',
     links : {
